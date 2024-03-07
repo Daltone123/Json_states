@@ -7,5 +7,17 @@ with open('states.json') as f:
     data = json.load(f)
 
 #looping through the data with the key 'states'
-for states in data:
-    print(states)
+for states in data['states']:
+    print(states['name'], states['abbreviation'])
+
+    #to remove area code
+    #del (states['area_codes'])
+
+# #writing back as json
+#with open('new_states.json', 'w') as f:
+    #json.dumb(data, f)
+
+
+
+
+
